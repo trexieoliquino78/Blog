@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trexie & Kazandra | Duo Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo" onclick="showPage('home')">trexie & kazandra</div>
+    <div class="nav-links">
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="goToTeam()">Team</a>
+        <a onclick="showPage('trexie')">Trexie</a>
+        <a onclick="showPage('kazandra')">Kazandra</a>
+    </div>
+</nav>
+
+<div id="blog-detail" class="page-content detail-view">
+    <div class="detail-container">
+        <button class="back-link" onclick="goBackToJournal()">← Back to Journal</button>
+        <article>
+            <span id="detail-day" class="badge"></span>
+            <h1 id="detail-title"></h1>
+            <div class="detail-meta">By <span id="detail-author"></span> • 2024 Journey</div>
+            
+            <div id="detail-img-wrapper" class="detail-image-wrapper">
+                <img id="detail-image" src="" alt="Blog Image">
+            </div>
+
+            <div id="detail-text" class="detail-body"></div>
+        </article>
+    </div>
+</div>
+
+<div id="home" class="page-content active-page">
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="hero-sub">hello, we're</p>
+                <h1>Trexie & Kazandra</h1>
+                <p class="hero-desc">Two BSIT students sharing our daily lives and coding adventures.</p>
+                <button class="btn btn-alt" onclick="goToTeam()">Explore Our Work</button>
+            </div>
+            <div class="hero-img-box">
+                <img src="tk.jpg" alt="Team Photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="team-section" class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+            <div class="card">
+                <div class="avatar-box"><img src="trexie.jpg" alt="Trexie"></div>
+                <h3>Trexie M. Oliquino</h3>
+                <button class="btn" onclick="showPage('trexie')">View Journal</button>
+            </div>
+            <div class="card">
+                <div class="avatar-box"><img src="kazandra.jpg" alt="Kazandra"></div>
+                <h3>Kazandra Shane B. Salao</h3>
+                <button class="btn" onclick="showPage('kazandra')">View Journal</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="trexie" class="page-content journal-view">
+    <h1>Trexie's Daily Blog</h1>
+    <p class="scroll-hint">Swipe or scroll horizontally to see the journey ↔</p>
+    <div class="blog-grid">
+        <div class="post" onclick="openFullArticle('DAY 01', 'Starting Our Portfolio', 'We initialized the project today. The goal was to create a clean, minimalist portfolio using modern CSS techniques like Flexbox and CSS Variables.', 'Trexie', 'day1.jpg')">
+            <b>DAY 01</b><h3>UOTD: ULAM OF THE DAY</h3><p>Planned the repository and project structure...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 02', 'Designing the Layout', 'The layout is the skeleton of the user experience. I focused on the sticky navigation and making sure the page transitions felt smooth using CSS animations.', 'Trexie')">
+            <b>DAY 02</b><h3>Designing the Layout</h3><p>Worked on creating the layout using Flexbox...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 03', 'Adding Blog Content', 'Focusing on readability. We chose the Inter font for its clean lines. I also started drafting the content for our 7-day journal entries.', 'Trexie')">
+            <b>DAY 03</b><h3>Adding Blog Content</h3><p>Added article sections and improved readability...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 04', 'Styling the Sidebar', 'Refining the UI. I worked on a sidebar for additional navigation and tags to keep the blog organized.', 'Trexie')">
+            <b>DAY 04</b><h3>Styling the Sidebar</h3><p>Designed the sidebar with recent posts...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 05', 'Improving Responsiveness', 'Mobile first! I spent the day adjusting media queries to make sure our site looks great on smartphones.', 'Trexie', 'day5.jpg')">
+            <b>DAY 05</b><h3>Improving Responsiveness</h3><p>Worked on media queries for mobile-friendly use...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 06', 'Testing & Fixing Bugs', 'Bug hunting day. I fixed some issues with the horizontal scrollbar and hover effects on mobile.', 'Trexie')">
+            <b>DAY 06</b><h3>Testing & Fixing Bugs</h3><p>Fixed alignment issues and hover effects...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 07', 'Final Touches', 'Reviewing the code and doing a final cleanup before the launch. Everything is looking polished.', 'Trexie')">
+            <b>DAY 07</b><h3>Final Touches</h3><p>Final review and pushing all commits...</p>
+        </div>
+    </div>
+    <button class="btn" style="margin-top: 40px;" onclick="showPage('home')">← Back Home</button>
+</div>
+
+<div id="kazandra" class="page-content journal-view">
+    <h1>Kazandra's Daily Blog</h1>
+    <p class="scroll-hint">Swipe or scroll horizontally to see the journey ↔</p>
+    <div class="blog-grid">
+        <div class="post" onclick="openFullArticle('DAY 01', 'Kickoff', 'The first step was defining our identity. We wanted something that felt personal but professional. Lavender was our top choice.', 'Kazandra')">
+            <b>DAY 01</b><h3>Kickoff</h3><p>Setting project goals and defining identity...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 02', 'HTML Skeleton', 'Building the core. I focused on semantic HTML to ensure our site is accessible and well-structured from the ground up.', 'Kazandra')">
+            <b>DAY 02</b><h3>HTML Skeleton</h3><p>Structuring the base pages and logic...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 03', 'Media Assets', 'Images say a thousand words. I optimized our photos and created custom icons to match our purple theme.', 'Kazandra')">
+            <b>DAY 03</b><h3>Media Assets</h3><p>Gathering and optimizing images...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 04', 'Link Logic', 'Making it interactive. I implemented the JavaScript function that handles the page switching without reloading the browser.', 'Kazandra')">
+            <b>DAY 04</b><h3>Link Logic</h3><p>Connecting nav links and page switcher...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 05', 'CSS Refresh', 'Polishing the style. I updated the color palette variables to make the lavender shades more cohesive across the site.', 'Kazandra')">
+            <b>DAY 05</b><h3>CSS Refresh</h3><p>Updating the color palette for a softer feel...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 06', 'Testing', 'Testing on multiple browsers. I made sure our horizontal scroll works perfectly on Safari, Chrome, and Firefox.', 'Kazandra')">
+            <b>DAY 06</b><h3>Testing</h3><p>Cross-browser testing and fixing issues...</p>
+        </div>
+        <div class="post" onclick="openFullArticle('DAY 07', 'Review', 'Wrapping it up! It’s been a great journey documenting our progress over these 7 days.', 'Kazandra')">
+            <b>DAY 07</b><h3>Review</h3><p>Project completion! Everything is great...</p>
+        </div>
+    </div>
+    <button class="btn" style="margin-top: 40px;" onclick="showPage('home')">← Back Home</button>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3>trexie & kazandra</h3>
+            <p>BSIT Duo Portfolio.</p>
+        </div>
+        <div>
+            <h3>Connect With Us</h3>
+            <div class="footer-socials">
+                <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:your-email@gmail.com" title="Gmail"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let currentJournal = 'home';
+
+    function showPage(pageId) {
+        if(pageId === 'trexie' || pageId === 'kazandra') currentJournal = pageId;
+        document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active-page'));
+        document.getElementById(pageId).classList.add('active-page');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openFullArticle(day, title, text, author, imgUrl = '') {
+        document.getElementById('detail-day').innerText = day;
+        document.getElementById('detail-title').innerText = title;
+        document.getElementById('detail-text').innerText = text;
+        document.getElementById('detail-author').innerText = author;
+        
+        const wrapper = document.getElementById('detail-img-wrapper');
+        const img = document.getElementById('detail-image');
+        
+        if(imgUrl) {
+            img.src = imgUrl;
+            wrapper.style.display = 'block';
+        } else {
+            wrapper.style.display = 'none';
+        }
+        
+        showPage('blog-detail');
+    }
+
+    function goBackToJournal() {
+        showPage(currentJournal);
+    }
+
+    function goToTeam() {
+        showPage('home');
+        setTimeout(() => {
+            document.getElementById('team-section').scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    }
+</script>
+</body>
+</html>
